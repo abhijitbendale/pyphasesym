@@ -1,0 +1,41 @@
+Introduction
+============
+
+This is the documentation for pyphasesym: python implementation of phasesym.
+pyphasesym is based on Peter Kovesi's original phasesym algorithm, paper and
+code. The original code and papers can be obtained from Peter Kovesi's 
+website. For more details reader is referred to Dr.Kovesi's 
+`webpage <http://www.csse.uwa.edu.au/~pk/Research/MatlabFns/>`_
+
+Refer [1]_ and [2]_ for further details.
+
+In this package we provide a modularized version of Pete's original matlab code.
+Preliminary  unittesting is introduced in this code. This code follows PEP8 and 
+pylint specifications. 
+
+The documentation is provided in rst format. The txt files can be compiled to
+produce required output format using sphinx. A precompiled pdf (created by 
+sphinx) is provided with this package (pyphasesym.pdf)
+
+Prerequisites
+-------------
+
+Following python modules are necessary for the use of the code:
+
+* numpy
+* scipy
+* optparse
+* unittest
+* Image
+* ImageOps
+
+.. rubric:: References
+
+.. [1] Peter Kovesi, "Symmetry and Asymmetry From Local Phase" AI'97, Tenth
+	   Australian Joint Conference on Artificial Intelligence. 2 - 4 December
+       1997. http://www.cs.uwa.edu.au/pub/robvis/papers/pk/ai97.ps.gz.
+
+.. [2] Peter Kovesi, "Image Features From Phase Congruency". Videre: A
+       Journal of Computer Vision Research. MIT Press. Volume 1, Number 3,
+       Summer 1999 http://mitpress.mit.edu/e-journals/Videre/001/v13.html
+

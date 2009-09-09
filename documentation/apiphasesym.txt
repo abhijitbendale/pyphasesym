@@ -1,0 +1,16 @@
+Python Phasesym API Specification 2.0
+===============================================================================
+
+(pull docstrings from functions here)
+
+Function Description
+------------------------------------------------------------------------------
+
+.. function:: phasesym_from_filename
+   
+   This function accepts image filename and list of parameters for computing
+   phase symmetry in the image
+
+.. function:: get_gabor
+   
+   This function computes gabor wavelets

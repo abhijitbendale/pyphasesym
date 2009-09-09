@@ -1,0 +1,48 @@
+Tutorial
+============
+
+Once installation is done, the code can be used in one of the following ways
+
+Example 1
+-----------
+
+In python/ipython interactive shell::
+	
+	import Image
+	from pyphasesym import *
+	import numpy as np
+	img = Image.open('cameraman.tif')
+	imarr = np.asarray(img)
+	phasesym, orientation = phasesym_from_array(imarr, 3, 5, 3, 2.1, 0.6, 1.3, 3, 1)
+
+Similarly any other function from pyphasesym can be used. For usage, simply use
+docstrings. For eg in your ipyfrom shell type::
+
+	from pyphasesym import *
+	get_phasesym.__doc__
+
+
+Example 2
+-----------
+
+On a linux terminal you can use this package in followling manner
+
+The code has a set of default values of usage. Hence, the code can be used on a 
+terminal as ::
+
+	python pyphasesym.py <input image path> <output>
+
+where <input image path> : path to input image. All the image formats that can 
+be read by PIL can be used.
+<output> : this is the name of the file in which phasesym and orientation at 
+each point in the image will be stored as numpy arrays in cPickle format.
+
+In order to use user defined parameters for computing phasesym for a given 
+image, use the program in following way::
+
+	python pyphasesym.py <input image path> <output> -s <nscale> -o <norient> -w <min_wave_length> -m <mult> -g <sigma_on_f> -d <d_thetaa_sigma> -k <nstdeviations> -p <polarity>
+
+Any number of above mentioned parameters can be specified. The program contains
+set of defaults for each flag. Hence, a potential usage coule be::
+
+	python main_phasesym.py cameraman.tif out -s 7 -o 4 -p 1
